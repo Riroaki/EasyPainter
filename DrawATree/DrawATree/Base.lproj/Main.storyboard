@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawATree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wfj-8p-Wa1" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LE6-pb-ILA" userLabel="Main">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eka-zX-OyC" userLabel="Temp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7X8-lp-bB1" userLabel="leafSwitch">
+                                <rect key="frame" x="310" y="20" width="51" height="31"/>
+                                <connections>
+                                    <action selector="turnOnLeaf" destination="BYZ-38-t0r" eventType="valueChanged" id="mzd-xi-BjV"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AbV-AE-3hD" userLabel="symmSwitch">
+                                <rect key="frame" x="16" y="20" width="51" height="31"/>
+                                <connections>
+                                    <action selector="turnOnSymm" destination="BYZ-38-t0r" eventType="valueChanged" id="1R7-gx-Pe0"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khg-h4-Hl2">
+                                <rect key="frame" x="172" y="24" width="30" height="30"/>
+                                <state key="normal" image="c.png"/>
+                                <connections>
+                                    <action selector="clearWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTe-ka-unU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7X8-lp-bB1" secondAttribute="trailing" constant="16" id="5Tn-2H-kaM"/>
+                            <constraint firstItem="Wfj-8p-Wa1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BdU-7H-88u"/>
+                            <constraint firstItem="LE6-pb-ILA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="H5r-R1-V3c"/>
+                            <constraint firstItem="khg-h4-Hl2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JWU-rg-Z3p"/>
+                            <constraint firstItem="khg-h4-Hl2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="QAP-ux-bK7"/>
+                            <constraint firstItem="7X8-lp-bB1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R2u-PD-yQ2"/>
+                            <constraint firstItem="Wfj-8p-Wa1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RLJ-W0-eY4"/>
+                            <constraint firstItem="eka-zX-OyC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RVs-ff-U3m"/>
+                            <constraint firstItem="eka-zX-OyC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ePw-ZB-6NH"/>
+                            <constraint firstItem="Wfj-8p-Wa1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gRy-QF-Z5y"/>
+                            <constraint firstItem="AbV-AE-3hD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jZs-hF-WNC"/>
+                            <constraint firstItem="LE6-pb-ILA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jrZ-ky-7QB"/>
+                            <constraint firstItem="LE6-pb-ILA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p8h-yb-aNX"/>
+                            <constraint firstItem="LE6-pb-ILA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pg9-Si-od5"/>
+                            <constraint firstItem="eka-zX-OyC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q6G-Mh-y8w"/>
+                            <constraint firstItem="Wfj-8p-Wa1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="reK-Vo-9pe"/>
+                            <constraint firstItem="eka-zX-OyC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uGy-ji-PHG"/>
+                            <constraint firstItem="AbV-AE-3hD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vew-HE-TIc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leafSwitch" destination="7X8-lp-bB1" id="l71-Sc-KSl"/>
+                        <outlet property="mainImage" destination="LE6-pb-ILA" id="K32-w6-xTZ"/>
+                        <outlet property="symmSwitch" destination="AbV-AE-3hD" id="PbE-Ed-EIF"/>
+                        <outlet property="tempImage" destination="eka-zX-OyC" id="bcd-Sc-Mpy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background2.png" width="608" height="1080"/>
+        <image name="c.png" width="30" height="30"/>
+    </resources>
+</document>
